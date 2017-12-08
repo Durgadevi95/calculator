@@ -3,4 +3,4 @@ osx_image: xcode8.1
 before_install:
  - brew update
 script:
- - xcodebuild -project Calculator.xcodeproj -scheme Calculator -sdk iphonesimulator -destination 'platform=iOS Simulator, id=0EB7E0E4-915F-497E-9D1C-934A10FA82E3, OS=10.3.1, name=iPhone 6' clean build test | xcpretty -c --test --color
+ - xcodebuild -project Calculator.xcodeproj -scheme Calculator -sdk iphonesimulator clean build | xcpretty -c --test --color
