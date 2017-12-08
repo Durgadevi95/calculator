@@ -2,4 +2,4 @@ language: objective-c
 before_install:
  - brew update
 script:
- - xcodebuild -project Calculator.xcodeproj -scheme CalculatorTests -sdk iphonesimulator build test | xcpretty -c --test --color
+ - xcodebuild -project Calculator.xcodeproj -scheme Calculator -sdk iphonesimulator -destination 'platform=iOS,id=iPhoneUUID' build test | xcpretty -c --test --color
