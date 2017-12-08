@@ -1,5 +1,6 @@
 language: objective-c
+osx_image: xcode8.1
 before_install:
  - brew update
 script:
- - xcodebuild -project Calculator.xcodeproj -scheme Calculator -sdk iphonesimulator -destination 'platform=iOS,id=iPhoneUUID' build test | xcpretty -c --test --color
+ - xcodebuild -project Calculator.xcodeproj -scheme Calculator -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.1,name=iPhone 7' build test | xcpretty -c --test --color
